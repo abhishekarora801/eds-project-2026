@@ -1,0 +1,80 @@
+.image-compare {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.image-compare img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-compare-left {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 50%;
+  overflow: hidden;
+  border-right: 1px solid rgb(255 255 255 / 40%);
+}
+
+.image-compare-left img {
+  width: auto;
+  max-width: none;
+}
+
+.image-compare:hover .image-compare-left {
+  border-right-color: rgb(255 255 255 / 80%);
+}
+
+.image-compare-slider {
+  position: absolute;
+  inset: 0 -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.image-compare-slider input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  pointer-events: auto;
+}
+
+.image-compare-slider input[type="range"]:focus {
+  outline: none;
+}
+
+.image-compare-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--background-color, #fff);
+  border: 2px solid var(--link-color, #035fe6);
+  cursor: ew-resize;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 40%);
+}
+
+.image-compare-slider input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--background-color, #fff);
+  border: 2px solid var(--link-color, #035fe6);
+  cursor: ew-resize;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 40%);
+}
+
+.image-compare-slider input[type="range"]::-moz-range-track {
+  background: transparent;
+  border: 0;
+}
