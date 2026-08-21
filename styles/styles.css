@@ -323,3 +323,8 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* section metadata day2 */
+main .section.light-grey {
+    background-color: red;
+}
