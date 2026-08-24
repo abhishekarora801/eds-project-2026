@@ -1,0 +1,53 @@
+.employee-list-items {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.employee-list-item {
+  padding: 16px 20px;
+  border: 1px solid var(--dark-color, #ddd);
+  border-radius: 8px;
+  background: var(--background-color, #fff);
+}
+
+.employee-list-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.employee-list-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: var(--dark-color, #555);
+  font-size: 0.9rem;
+}
+
+.employee-list-meta span::before {
+  content: "•";
+  margin-right: 8px;
+  color: var(--link-color, #035fe6);
+}
+
+.employee-list-meta span:first-child::before {
+  content: none;
+}
+
+.employee-list-load-more {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--link-color, #035fe6);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.employee-list-load-more:hover {
+  background: var(--link-hover-color, #024fbf);
+}
