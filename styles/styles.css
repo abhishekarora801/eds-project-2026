@@ -12,12 +12,12 @@
 
 :root {
   /* colors */
-  --background-color: cyan;
-  --light-color: #f8f8f8;
+  --background-color: #fff;
+  --light-color: #f2f2f2;
   --dark-color: #505050;
-  --text-color: magenta;
-  --link-color: #3b63fb;
-  --link-hover-color: red;
+  --text-color: #131313;
+  --link-color: #035fe6;
+  --link-hover-color: #024fbf;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -156,8 +156,15 @@ button {
 /* links */
 a:any-link {
   color: var(--link-color);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   overflow-wrap: break-word;
+}
+
+nav a:any-link,
+.nav-brand a:any-link,
+.button:any-link {
+  text-decoration: none;
 }
 
 a:hover {
@@ -326,5 +333,5 @@ main .section.highlight {
 
 /* section metadata day2 */
 main .section.light-grey {
-    background-color: red;
+    background-color: grey;
 }
