@@ -146,11 +146,47 @@ function decorateButtons(main) {
  * Decorates the main element.
  * @param {Element} main The main element
  */
+/**
+ * Applies section metadata as section classes and removes the metadata block.
+ * The vendored aem.js decorateSections does not process `.section-metadata`
+ * blocks, so imported content emits them as loadable blocks (404). This
+ * consumes each `div.section-metadata` (key/value rows) into the parent
+ * section: a `Style` key becomes space-separated section classes, any other
+ * key becomes a `data-*` attribute. Runs after decorateSections (so `.section`
+ * exists) and before decorateBlocks (so it is never loaded as a block).
+ * @param {Element} main The main element
+ */
+function decorateSectionMetadata(main) {
+  main.querySelectorAll('.section-metadata').forEach((meta) => {
+    const section = meta.closest('.section') || meta.parentElement;
+    if (!section) return;
+    [...meta.querySelectorAll(':scope > div > div:first-child')].forEach((keyEl) => {
+      const key = keyEl.textContent.trim().toLowerCase();
+      const valEl = keyEl.nextElementSibling;
+      const value = valEl ? valEl.textContent.trim() : '';
+      if (!value) return;
+      if (key === 'style') {
+        value.split(',').forEach((s) => {
+          const cls = s.trim().replace(/\s+/g, '-').toLowerCase();
+          if (cls) section.classList.add(cls);
+        });
+      } else {
+        section.dataset[key.replace(/-([a-z])/g, (_, c) => c.toUpperCase())] = value;
+      }
+    });
+    // remove the metadata block and its now-empty wrapper
+    const wrapper = meta.parentElement;
+    meta.remove();
+    if (wrapper && wrapper !== section && wrapper.children.length === 0) wrapper.remove();
+  });
+}
+
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  decorateSectionMetadata(main);
   decorateBlocks(main);
   decorateButtons(main);
 }

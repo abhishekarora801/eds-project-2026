@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "content-landing",
+      "urls": [
+        "https://www.wknd-trendsetters.site/",
+        "https://www.wknd-trendsetters.site/fashion-trends-of-the-season",
+        "https://www.wknd-trendsetters.site/fashion-trends-young-adults"
+      ],
+      "representativeUrl": "https://www.wknd-trendsetters.site/",
+      "coverageGaps": [],
+      "description": "Marketing/landing page: hero intro + full-width content sections (text+image groups, galleries, testimonials, CTA)",
+      "blocks": [
+        { "name": "columns-intro", "instances": ["#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"] },
+        { "name": "columns-article", "instances": ["#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"] },
+        { "name": "cards-gallery", "instances": ["#main-content > section.section.secondary-section:nth-of-type(2) .grid-layout.grid-gap-sm"] },
+        { "name": "tabs-testimonial", "instances": ["#main-content > section.section:nth-of-type(3) .tabs-wrapper"] },
+        { "name": "cards-article", "instances": ["#main-content > section.section.secondary-section:nth-of-type(4) .grid-layout.grid-gap-md"] },
+        { "name": "accordion-faq", "instances": ["#main-content > section.section:nth-of-type(5) .faq-list"] },
+        { "name": "hero-overlay", "instances": ["#main-content > section.section.inverse-section .grid-layout.desktop-1-column"] }
+      ],
+      "sections": [
+        { "id": "rc1", "name": "Intro", "selector": "#main-content > header.section.secondary-section", "style": "secondary", "blocks": ["columns-intro"], "defaultContent": [] },
+        { "id": "rc2", "name": "Article header", "selector": "#main-content > section.section:nth-of-type(1)", "style": null, "blocks": ["columns-article"], "defaultContent": [] },
+        { "id": "rc3", "name": "Snapshot gallery", "selector": "#main-content > section.section.secondary-section:nth-of-type(2)", "style": "secondary", "blocks": ["cards-gallery"], "defaultContent": ["#main-content > section.section.secondary-section:nth-of-type(2) > div.container > div.utility-text-align-center"] },
+        { "id": "rc4", "name": "Testimonials", "selector": "#main-content > section.section:nth-of-type(3)", "style": null, "blocks": ["tabs-testimonial"], "defaultContent": [] },
+        { "id": "rc5", "name": "Latest articles", "selector": "#main-content > section.section.secondary-section:nth-of-type(4)", "style": "secondary", "blocks": ["cards-article"], "defaultContent": ["#main-content > section.section.secondary-section:nth-of-type(4) > div.container > div.utility-text-align-center"] },
+        { "id": "rc6", "name": "FAQ", "selector": "#main-content > section.section:nth-of-type(5)", "style": null, "blocks": ["accordion-faq"], "defaultContent": ["#main-content > section.section:nth-of-type(5) .grid-layout.grid-gap-xxl > div:first-child"] },
+        { "id": "rc7", "name": "Closing CTA", "selector": "#main-content > section.section.inverse-section", "style": null, "blocks": ["hero-overlay"], "defaultContent": [] }
+      ]
+    },
+    {
+      "name": "listing-index",
+      "urls": [
+        "https://www.wknd-trendsetters.site/blog",
+        "https://www.wknd-trendsetters.site/case-studies",
+        "https://www.wknd-trendsetters.site/fashion-insights"
+      ],
+      "representativeUrl": "https://www.wknd-trendsetters.site/blog",
+      "coverageGaps": [],
+      "description": "Index/listing page: hero header + featured article promo + card grid + accent CTA band",
+      "blocks": [
+        { "name": "columns-intro", "instances": ["#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"] },
+        { "name": "columns-article", "instances": ["#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"] },
+        { "name": "cards-article", "instances": ["#articles .grid-layout.grid-gap-md"] }
+      ],
+      "sections": [
+        { "id": "rc1", "name": "Hero header", "selector": "#main-content > header.section.secondary-section", "style": "secondary", "blocks": ["columns-intro"], "defaultContent": [] },
+        { "id": "rc2", "name": "Featured article", "selector": "#main-content > section.section:nth-of-type(1)", "style": null, "blocks": ["columns-article"], "defaultContent": [] },
+        { "id": "rc3", "name": "Latest articles", "selector": "#articles", "style": "secondary", "blocks": ["cards-article"], "defaultContent": ["#articles > div.container > div.utility-text-align-center"] },
+        { "id": "rc4", "name": "Accent CTA", "selector": "#main-content > section.section.accent-section", "style": "accent", "blocks": [], "defaultContent": ["#main-content > section.section.accent-section > div.container"] }
+      ]
+    },
+    {
+      "name": "blog-article",
+      "urls": [
+        "https://www.wknd-trendsetters.site/blog/ace-pro-court-polo",
+        "https://www.wknd-trendsetters.site/blog/fashion-blog-post",
+        "https://www.wknd-trendsetters.site/blog/fashion-trends-young-culture",
+        "https://www.wknd-trendsetters.site/blog/fashion-trends-young-style",
+        "https://www.wknd-trendsetters.site/blog/flip-flop-summer-style",
+        "https://www.wknd-trendsetters.site/blog/latest-trends-young-casual-fashion",
+        "https://www.wknd-trendsetters.site/blog/street-style-trends"
+      ],
+      "representativeUrl": "https://www.wknd-trendsetters.site/blog/ace-pro-court-polo",
+      "coverageGaps": [],
+      "description": "Blog/article detail page: article header (image + breadcrumb/title/meta) followed by article body (default content)",
+      "blocks": [
+        { "name": "columns-article", "instances": ["#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"] }
+      ],
+      "sections": [
+        { "id": "rc1", "name": "Article header", "selector": "#main-content > section.section:nth-of-type(1)", "style": null, "blocks": ["columns-article"], "defaultContent": [] },
+        { "id": "rc2", "name": "Article body", "selector": "#main-content > section.section:nth-of-type(2)", "style": null, "blocks": [], "defaultContent": ["#main-content > section.section:nth-of-type(2) > div.container"] }
+      ]
+    },
+    {
+      "name": "faq-page",
+      "urls": [
+        "https://www.wknd-trendsetters.site/faq"
+      ],
+      "representativeUrl": "https://www.wknd-trendsetters.site/faq",
+      "coverageGaps": [],
+      "description": "FAQ page: hero intro, accordion of Q&A, contact columns, accent CTA",
+      "blocks": [
+        { "name": "columns-intro", "instances": ["#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"] },
+        { "name": "accordion-faq", "instances": ["#main-content > section.section:nth-of-type(1) .faq-list"] },
+        { "name": "columns-contact", "instances": ["#main-content > section.section.secondary-section .grid-layout.grid-gap-xxl"] }
+      ],
+      "sections": [
+        { "id": "rc1", "name": "Hero intro", "selector": "#main-content > header.section.secondary-section", "style": "secondary", "blocks": ["columns-intro"], "defaultContent": [] },
+        { "id": "rc2", "name": "FAQ accordion", "selector": "#main-content > section.section:nth-of-type(1)", "style": null, "blocks": ["accordion-faq"], "defaultContent": [] },
+        { "id": "rc3", "name": "Contact", "selector": "#main-content > section.section.secondary-section", "style": "secondary", "blocks": ["columns-contact"], "defaultContent": [] },
+        { "id": "rc4", "name": "Accent CTA", "selector": "#main-content > section.section.accent-section", "style": "accent", "blocks": [], "defaultContent": ["#main-content > section.section.accent-section > div.container"] }
+      ]
+    },
+    {
+      "name": "cards-showcase",
+      "urls": [
+        "https://www.wknd-trendsetters.site/fashion-trends-young-adults-casual-sport"
+      ],
+      "representativeUrl": "https://www.wknd-trendsetters.site/fashion-trends-young-adults-casual-sport",
+      "coverageGaps": [],
+      "description": "Showcase page: hero intro, trend card grid, feature promo, accent CTA",
+      "blocks": [
+        { "name": "columns-intro", "instances": ["#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"] },
+        { "name": "cards-trend", "instances": ["#trends .grid-layout.grid-gap-md"] },
+        { "name": "columns-feature", "instances": ["#main-content > section.section.secondary-section .grid-layout.grid-gap-lg"] }
+      ],
+      "sections": [
+        { "id": "rc1", "name": "Hero intro", "selector": "#main-content > header.section.secondary-section", "style": "secondary", "blocks": ["columns-intro"], "defaultContent": [] },
+        { "id": "rc2", "name": "Trend grid", "selector": "#trends", "style": null, "blocks": ["cards-trend"], "defaultContent": ["#trends > div.container > div.utility-text-align-center"] },
+        { "id": "rc3", "name": "Feature promo", "selector": "#main-content > section.section.secondary-section", "style": "secondary", "blocks": ["columns-feature"], "defaultContent": [] },
+        { "id": "rc4", "name": "Accent CTA", "selector": "#main-content > section.section.accent-section", "style": "accent", "blocks": [], "defaultContent": ["#main-content > section.section.accent-section > div.container"] }
+      ]
+    }
+  ]
+}
