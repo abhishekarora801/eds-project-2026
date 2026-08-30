@@ -27,7 +27,12 @@ function matches(path, filter) {
   });
 }
 
-function createCard({ path, title, description, image }) {
+function createCard({
+  path,
+  title,
+  description,
+  image,
+}) {
   const card = document.createElement('a');
   card.className = 'article-list-card';
   card.href = path;
