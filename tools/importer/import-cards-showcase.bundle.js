@@ -78,25 +78,27 @@ var CustomImportScript = (() => {
   function parse2(element, { document: document2 }) {
     const cards = Array.from(element.children).filter((c) => c.nodeType === 1);
     const cells = [];
-    cards.forEach((card) => {
+    cards.forEach((card, idx) => {
       const img = card.querySelector("img");
       const href = card.getAttribute("href") || card.querySelector("a") && card.querySelector("a").getAttribute("href");
       const body = card.querySelector(".trend-card-body") || card;
       const bodyCell = [];
-      let title = "";
       Array.from(body.children).forEach((node) => {
-        const heading = node.matches('h1, h2, h3, h4, h5, h6, [class*="heading"]') ? node : node.querySelector('h1, h2, h3, h4, h5, h6, [class*="heading"]');
-        if (heading && !title) title = heading.textContent.trim();
+        node.querySelectorAll && node.querySelectorAll("a").forEach((a) => {
+          const span = document2.createElement("span");
+          span.innerHTML = a.innerHTML;
+          a.replaceWith(span);
+        });
+        const heading = node.matches('h1, h2, h3, h4, h5, h6, [class*="heading"]') ? node : node.querySelector && node.querySelector('h1, h2, h3, h4, h5, h6, [class*="heading"]');
+        if (href && heading && !heading.querySelector("a")) {
+          const link = document2.createElement("a");
+          link.setAttribute("href", href);
+          link.textContent = heading.textContent.trim();
+          heading.textContent = "";
+          heading.append(link);
+        }
         bodyCell.push(node);
       });
-      if (href) {
-        const cta = document2.createElement("p");
-        const link = document2.createElement("a");
-        link.setAttribute("href", href);
-        link.textContent = title || "Read more";
-        cta.append(link);
-        bodyCell.push(cta);
-      }
       if (img || bodyCell.length) {
         cells.push([img || "", bodyCell.length ? bodyCell : ""]);
       }
