@@ -3,6 +3,18 @@ export default function decorate(block) {
   right.className = 'image-compare-right';
   left.className = 'image-compare-left';
 
+  // keep the overlay image at the same rendered width as the base image,
+  // regardless of how narrow the clipping window (left) currently is
+  const inner = document.createElement('div');
+  inner.className = 'image-compare-left-inner';
+  while (left.firstChild) inner.append(left.firstChild);
+  left.append(inner);
+
+  const resizeObserver = new ResizeObserver(() => {
+    inner.style.width = `${block.getBoundingClientRect().width}px`;
+  });
+  resizeObserver.observe(block);
+
   const afterLabel = document.createElement('span');
   afterLabel.className = 'image-compare-label';
   afterLabel.textContent = 'After';

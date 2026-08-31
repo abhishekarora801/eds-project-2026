@@ -42,11 +42,6 @@
   border-right: 1px solid rgb(255 255 255 / 40%);
 }
 
-.image-compare-left img {
-  width: auto;
-  max-width: none;
-}
-
 .image-compare:hover .image-compare-left {
   border-right-color: rgb(255 255 255 / 80%);
 }
