@@ -2,6 +2,30 @@
   position: relative;
   overflow: hidden;
   line-height: 0;
+  min-height: 200px;
+}
+
+.image-compare-label {
+  position: absolute;
+  top: 8px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: normal;
+  color: #fff;
+  background: rgb(0 0 0 / 55%);
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  pointer-events: none;
+}
+
+.image-compare-right .image-compare-label {
+  right: 8px;
+}
+
+.image-compare-left .image-compare-label {
+  left: 8px;
 }
 
 .image-compare img {
@@ -18,11 +42,6 @@
   border-right: 1px solid rgb(255 255 255 / 40%);
 }
 
-.image-compare-left img {
-  width: auto;
-  max-width: none;
-}
-
 .image-compare:hover .image-compare-left {
   border-right-color: rgb(255 255 255 / 80%);
 }
@@ -37,7 +56,6 @@
 }
 
 .image-compare-slider input[type="range"] {
-  -webkit-appearance: none;
   appearance: none;
   width: 100%;
   height: 100%;
@@ -53,7 +71,6 @@
 }
 
 .image-compare-slider input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
   appearance: none;
   width: 24px;
   height: 24px;
