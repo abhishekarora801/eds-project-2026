@@ -15,4 +15,24 @@ export default function decorate(block) {
       }
     });
   });
+
+  // decorate CTA links (source: primary "See case" + secondary "All stories")
+  cols.forEach((col) => {
+    if (col.querySelector('picture')) return;
+    const btnParagraphs = [...col.querySelectorAll(':scope > p')].filter((p) => {
+      const a = p.querySelector('a');
+      return a && p.textContent.trim() === a.textContent.trim();
+    });
+    if (!btnParagraphs.length) return;
+
+    const group = document.createElement('div');
+    group.className = 'columns-intro-buttons';
+    btnParagraphs.forEach((p, i) => {
+      const a = p.querySelector('a');
+      a.classList.add('button', i === 0 ? 'primary' : 'secondary');
+      group.append(a);
+      p.remove();
+    });
+    col.append(group);
+  });
 }

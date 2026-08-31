@@ -1,28 +1,68 @@
+/* Block: columns-feature — image + heading + lead paragraph + CTA feature promo.
+   Values extracted from source computed styles. */
+
 .columns-feature > div {
   display: flex;
   flex-direction: column;
-}
-
-.columns-feature img {
-  width: 100%;
+  gap: 24px;
 }
 
 .columns-feature > div > div {
   order: 1;
 }
 
+/* image column */
 .columns-feature > div > .columns-feature-img-col {
   order: 0;
 }
 
-.columns-feature > div > .columns-feature-img-col img {
+.columns-feature img {
   display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* text column typography */
+.columns-feature h2 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.columns-feature p {
+  margin: 16px 0 0;
+  color: rgb(64 64 64);
+  font-size: var(--body-font-size-m);
+  line-height: 1.6;
+}
+
+/* CTA link (EDS does not add .button here) styled as pill button */
+.columns-feature a {
+  display: inline-block;
+  margin-top: 24px;
+  border: 2px solid var(--dark-color);
+  border-radius: 9999px;
+  padding: 12px 24px;
+  background-color: var(--dark-color);
+  color: var(--background-color);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.columns-feature a:hover,
+.columns-feature a:focus-visible {
+  border-color: var(--link-hover-color);
+  background-color: var(--link-hover-color);
+  color: var(--background-color);
 }
 
 @media (width >= 900px) {
   .columns-feature > div {
+    flex-direction: row;
     align-items: center;
-    flex-direction: unset;
     gap: 24px;
   }
 

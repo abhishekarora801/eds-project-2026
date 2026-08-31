@@ -58,8 +58,8 @@
   --grid-gap-lg: 24px;
   --grid-gap-xxl: 64px;
 
-  /* layout */
-  --section-padding: 80px;
+  /* layout — source colored sections use 128px vertical padding */
+  --section-padding: 128px;
   --content-max-width: 1200px;
   --content-padding: 24px;
   --radius-card: 1.25rem;
@@ -360,6 +360,12 @@ main .section.secondary {
   padding: var(--section-padding) 0;
 }
 
+/* secondary (grey) sections center their default-content heading/intro
+   above the block (source: gallery + "Latest articles" are centered) */
+main .section.secondary > .default-content-wrapper {
+  text-align: center;
+}
+
 /* dark / inverse section (source: inverse-section — black bg, white text) */
 main .section.dark,
 main .section.inverse {
@@ -369,7 +375,112 @@ main .section.inverse {
   padding: var(--section-padding) 0;
 }
 
+/* accent section (source: bright-yellow CTA band — centered content,
+   black pill button). bg extracted from source: rgb(244, 254, 139) */
+main .section.accent {
+  background-color: rgb(244 254 139);
+  color: var(--text-color);
+  margin: 0;
+  padding: var(--section-padding) 0;
+}
+
+main .section.accent > .default-content-wrapper {
+  text-align: center;
+}
+
+/* the CTA link is authored as a plain link; render it as the source's
+   black pill button (bg #000, white text, fully rounded) */
+main .section.accent > .default-content-wrapper a:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--space-md);
+  border: 2px solid var(--dark-color);
+  border-radius: 2.4em;
+  padding: 0.75em 1.5em;
+  background-color: var(--dark-color);
+  color: var(--background-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main .section.accent > .default-content-wrapper a:any-link:hover,
+main .section.accent > .default-content-wrapper a:any-link:focus-visible {
+  border-color: var(--link-hover-color);
+  background-color: var(--link-hover-color);
+  color: var(--background-color);
+}
+
 /* section metadata day2 */
 main .section.light-grey {
     background-color: grey;
+}
+
+/* ---- Long-form article body / default-content prose ----
+   Source (blog article) constrains prose to a ~720px reading measure with
+   16px/1.7 body text, generous paragraph rhythm, rounded inline images, and
+   an accent-bordered pull-quote. The reading measure is scoped to default
+   content in plain (uncolored) sections so full-bleed / centered marketing
+   bands (light, secondary, dark, inverse, accent) keep their wider layout. */
+main .section:not(.light, .highlight, .secondary, .dark, .inverse, .accent, .light-grey) > .default-content-wrapper {
+  max-width: 720px;
+}
+
+/* Section-intro default content that sits DIRECTLY ABOVE a card grid (e.g. the
+   white "Trend alert" heading above the cards-trend grid) is a centered,
+   full-width marketing intro on the source, not long-form prose. Scoped to
+   intros preceding a cards-* block so it never matches article-body prose
+   (which precedes a spec/other block and must keep the 720px reading measure).
+   Placed after the prose rule so it wins for these intros. */
+main .default-content-wrapper:has(+ [class*="cards-"][class$="-wrapper"]) {
+  max-width: var(--content-max-width);
+  text-align: center;
+}
+
+main .default-content-wrapper p {
+  font-size: var(--body-font-size-s);
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
+main .default-content-wrapper h2 {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+main .default-content-wrapper h3 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+main .default-content-wrapper ul,
+main .default-content-wrapper ol {
+  margin: 0 0 20px;
+  padding-left: 24px;
+}
+
+main .default-content-wrapper li {
+  font-size: var(--body-font-size-s);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+main .default-content-wrapper picture img {
+  display: block;
+  border-radius: 20px;
+  margin: 32px 0;
+}
+
+main .default-content-wrapper blockquote {
+  margin: 32px 0;
+  padding: 0 0 0 24px;
+  border-left: 4px solid rgb(244 254 139);
+  color: rgb(64 64 64);
+  font-style: italic;
+}
+
+main .default-content-wrapper blockquote p {
+  margin: 0;
+  color: rgb(64 64 64);
+  font-style: italic;
 }
