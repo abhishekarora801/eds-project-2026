@@ -1,0 +1,77 @@
+/* columns-article -- article header: cover image beside breadcrumb + heading + meta.
+   Values extracted from source computed styles (wknd-trendsetters). */
+
+/* row: stacked on mobile (image first), side-by-side on desktop */
+.columns-article > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap-lg); /* 24px */
+}
+
+/* cover image -- 3:2, rounded corners, fills its column */
+.columns-article .columns-article-img-col img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* --- text column --- */
+
+/* breadcrumb: "Home > Case studies" (only paragraph in the block with links) */
+.columns-article p:has(a) {
+  display: flex;
+  align-items: center;
+  gap: var(--grid-gap-xs); /* 8px */
+  margin: 0 0 32px;
+}
+
+.columns-article p:has(a) a:any-link {
+  font-size: var(--body-font-size-s); /* 16px */
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* chevron separator between the two breadcrumb links */
+.columns-article p:has(a) a + a::before {
+  content: '\203A'; /* › */
+  margin-right: var(--grid-gap-xs); /* 8px */
+  color: var(--text-secondary-color);
+  font-weight: 400;
+}
+
+/* heading */
+.columns-article h2 {
+  margin: 0;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+/* meta lines -- "By Taylor Brooks" then "June 12, 2024 • 4 min read" */
+.columns-article h2 + p {
+  margin: 16px 0 0;
+  font-size: var(--body-font-size-xs); /* 14px */
+  color: var(--text-color);
+}
+
+.columns-article h2 + p + p {
+  margin: 4px 0 0;
+  font-size: var(--body-font-size-xs); /* 14px */
+  color: var(--text-secondary-color); /* #666 */
+}
+
+@media (width >= 900px) {
+  .columns-article > div {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--grid-gap-lg); /* 24px */
+  }
+
+  /* equal-width columns (1fr 1fr) */
+  .columns-article > div > div {
+    flex: 1;
+    min-width: 0;
+  }
+}

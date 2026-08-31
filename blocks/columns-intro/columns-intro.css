@@ -1,0 +1,92 @@
+/* Block: columns-intro -- values extracted from source computed styles */
+
+/* base layout (mobile-first): single column, text then images */
+.columns-intro > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl); /* 48px stack gap on mobile */
+}
+
+.columns-intro > div > div {
+  order: 1;
+}
+
+.columns-intro > div > .columns-intro-img-col {
+  order: 0;
+}
+
+/* heading (source: 56px / 700 / uppercase / -1.12px, Syncopate) */
+.columns-intro h1 {
+  margin: 0;
+  font-size: var(--heading-font-size-xxl);
+  font-weight: var(--heading-font-weight);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+/* subheading paragraph (source: 18px, line-height 28.8px, margin-top 24px) */
+.columns-intro > div > div > p {
+  margin: var(--grid-gap-lg) 0 0;
+  font-size: var(--body-font-size-m);
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* CTA button group (source: flex, gap 16px, margin-top 32px) */
+.columns-intro .columns-intro-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--grid-gap-md);
+  margin-top: var(--space-xl);
+}
+
+/* buttons (source: pill, padding 12px 24px, 14px / 600, 2px black border) */
+.columns-intro .columns-intro-buttons a.button:any-link {
+  margin: 0;
+  padding: 12px 24px;
+  border-width: 2px;
+  border-radius: 9999px;
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* image column: grid of 3 images (source: 2-col grid, gap 8px) */
+.columns-intro .columns-intro-img-col p {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap-xs);
+  margin: 0;
+}
+
+.columns-intro .columns-intro-img-col picture {
+  display: block;
+}
+
+.columns-intro .columns-intro-img-col img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media (width >= 900px) {
+  /* source: 2-col grid (1fr 1fr), gap 64px, vertically centered */
+  .columns-intro > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--grid-gap-xxl);
+  }
+
+  .columns-intro > div > div {
+    order: unset;
+  }
+
+  .columns-intro > div > .columns-intro-img-col {
+    order: unset;
+  }
+}

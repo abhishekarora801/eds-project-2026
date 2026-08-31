@@ -1,0 +1,123 @@
+/* hero-overlay -- full-bleed cover image, dark gradient overlay, bottom-left text */
+
+/* let the block stretch full width of the section */
+.hero-overlay-container .hero-overlay-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 360px;
+  border-radius: 20px;
+  overflow: clip;
+  color: #fff;
+}
+
+/* background image row -- fills the whole block behind everything */
+.hero-overlay > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  margin: 0;
+}
+
+/* text card body */
+.hero-overlay > div:last-child {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  width: 100%;
+}
+
+.hero-overlay > div:first-child > div,
+.hero-overlay > div:first-child picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-overlay > div:last-child > div {
+  max-width: 672px;
+  padding: 32px;
+}
+
+.hero-overlay picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* dark gradient overlay: transparent at top -> 70% black at bottom */
+.hero-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: linear-gradient(to top, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 0%) 60%);
+  pointer-events: none;
+}
+
+.hero-overlay h1,
+.hero-overlay h2,
+.hero-overlay h3 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  font-size: var(--heading-font-size-xxl);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.hero-overlay p {
+  margin: 16px 0 0;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* CTA -- white pill button, overrides EDS auto-decoration */
+.hero-overlay p:has(> a:only-child) {
+  margin-top: 32px;
+}
+
+.hero-overlay a,
+main .hero-overlay a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 12px 24px;
+  border: 2px solid #fff;
+  border-radius: 9999px;
+  background-color: #fff;
+  color: #000;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.hero-overlay a:hover,
+main .hero-overlay a.button:any-link:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+@media (width >= 900px) {
+  .hero-overlay {
+    min-height: 448px;
+  }
+
+  .hero-overlay > div:last-child > div {
+    padding: 64px;
+  }
+}

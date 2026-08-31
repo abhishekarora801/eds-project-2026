@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.wknd-trendsetters.site/fashion-insights",
+  "path": "fashion-insights",
+  "timestamp": "2026-08-31T05:19:05.312Z",
+  "title": "Fashion Blog - Discover Trends in Young Fashion",
+  "template": "insights-listing",
+  "blocks": [
+    "columns-intro",
+    "columns-article",
+    "cards-article",
+    "cards-gallery"
+  ]
+}
