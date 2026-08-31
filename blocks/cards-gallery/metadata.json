@@ -30,8 +30,14 @@
     ]
   },
   "usage": {
-    "pagesUsing": ["/index"],
-    "reuseCount": 1,
-    "lastUsed": "2026-08-30T16:22:00.000Z"
+    "pagesUsing": [
+      "/index",
+      "/fashion-trends-of-the-season",
+      "/fashion-trends-young-adults",
+      "/case-studies",
+      "/fashion-insights"
+    ],
+    "reuseCount": 5,
+    "lastUsed": "2026-08-31T05:16:20.574792+00:00"
   }
 }
