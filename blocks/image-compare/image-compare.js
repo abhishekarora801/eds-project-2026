@@ -1,4 +1,5 @@
 export default function decorate(block) {
+  const isVertical = block.classList.contains('vertical');
   const [right, left] = block.querySelectorAll(':scope > div');
   right.className = 'image-compare-right';
   left.className = 'image-compare-left';
@@ -12,9 +13,14 @@ export default function decorate(block) {
   range.max = 100;
   range.value = 50;
   range.setAttribute('aria-label', 'Compare images');
+  if (isVertical) range.setAttribute('orient', 'vertical');
 
   range.addEventListener('input', (e) => {
-    left.style.width = `${e.target.value}%`;
+    if (isVertical) {
+      left.style.height = `${e.target.value}%`;
+    } else {
+      left.style.width = `${e.target.value}%`;
+    }
   });
 
   slider.append(range);
