@@ -3,6 +3,16 @@ export default function decorate(block) {
   right.className = 'image-compare-right';
   left.className = 'image-compare-left';
 
+  const afterLabel = document.createElement('span');
+  afterLabel.className = 'image-compare-label';
+  afterLabel.textContent = 'After';
+  right.append(afterLabel);
+
+  const beforeLabel = document.createElement('span');
+  beforeLabel.className = 'image-compare-label';
+  beforeLabel.textContent = 'Before';
+  left.append(beforeLabel);
+
   const slider = document.createElement('div');
   slider.className = 'image-compare-slider';
 
