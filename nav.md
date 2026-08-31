@@ -1,6 +1,6 @@
 # Navigation
 
-[Fashion Blog](/)
+[:logo: Fashion Blog](/)
 
 ---
 
