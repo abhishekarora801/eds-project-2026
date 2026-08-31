@@ -6,52 +6,205 @@
     {
       "name": "content-landing",
       "urls": [
-        "https://www.wknd-trendsetters.site/",
-        "https://www.wknd-trendsetters.site/fashion-trends-of-the-season",
-        "https://www.wknd-trendsetters.site/fashion-trends-young-adults"
+        "https://www.wknd-trendsetters.site/"
       ],
       "representativeUrl": "https://www.wknd-trendsetters.site/",
       "coverageGaps": [],
       "description": "Marketing/landing page: hero intro + full-width content sections (text+image groups, galleries, testimonials, CTA)",
       "blocks": [
-        { "name": "columns-intro", "instances": ["#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"] },
-        { "name": "columns-article", "instances": ["#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"] },
-        { "name": "cards-gallery", "instances": ["#main-content > section.section.secondary-section:nth-of-type(2) .grid-layout.grid-gap-sm"] },
-        { "name": "tabs-testimonial", "instances": ["#main-content > section.section:nth-of-type(3) .tabs-wrapper"] },
-        { "name": "cards-article", "instances": ["#main-content > section.section.secondary-section:nth-of-type(4) .grid-layout.grid-gap-md"] },
-        { "name": "accordion-faq", "instances": ["#main-content > section.section:nth-of-type(5) .faq-list"] },
-        { "name": "hero-overlay", "instances": ["#main-content > section.section.inverse-section .grid-layout.desktop-1-column"] }
+        {
+          "name": "columns-intro",
+          "instances": [
+            "#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"
+          ]
+        },
+        {
+          "name": "columns-article",
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"
+          ]
+        },
+        {
+          "name": "cards-gallery",
+          "instances": [
+            "#main-content > section.section.secondary-section:nth-of-type(2) .grid-layout.grid-gap-sm"
+          ]
+        },
+        {
+          "name": "tabs-testimonial",
+          "instances": [
+            "#main-content > section.section:nth-of-type(3) .tabs-wrapper"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            "#main-content > section.section.secondary-section:nth-of-type(4) .grid-layout.grid-gap-md"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            "#main-content > section.section:nth-of-type(5) .faq-list"
+          ]
+        },
+        {
+          "name": "hero-overlay",
+          "instances": [
+            "#main-content > section.section.inverse-section .grid-layout.desktop-1-column"
+          ]
+        }
       ],
       "sections": [
-        { "id": "rc1", "name": "Intro", "selector": "#main-content > header.section.secondary-section", "style": "secondary", "blocks": ["columns-intro"], "defaultContent": [] },
-        { "id": "rc2", "name": "Article header", "selector": "#main-content > section.section:nth-of-type(1)", "style": null, "blocks": ["columns-article"], "defaultContent": [] },
-        { "id": "rc3", "name": "Snapshot gallery", "selector": "#main-content > section.section.secondary-section:nth-of-type(2)", "style": "secondary", "blocks": ["cards-gallery"], "defaultContent": ["#main-content > section.section.secondary-section:nth-of-type(2) > div.container > div.utility-text-align-center"] },
-        { "id": "rc4", "name": "Testimonials", "selector": "#main-content > section.section:nth-of-type(3)", "style": null, "blocks": ["tabs-testimonial"], "defaultContent": [] },
-        { "id": "rc5", "name": "Latest articles", "selector": "#main-content > section.section.secondary-section:nth-of-type(4)", "style": "secondary", "blocks": ["cards-article"], "defaultContent": ["#main-content > section.section.secondary-section:nth-of-type(4) > div.container > div.utility-text-align-center"] },
-        { "id": "rc6", "name": "FAQ", "selector": "#main-content > section.section:nth-of-type(5)", "style": null, "blocks": ["accordion-faq"], "defaultContent": ["#main-content > section.section:nth-of-type(5) .grid-layout.grid-gap-xxl > div:first-child"] },
-        { "id": "rc7", "name": "Closing CTA", "selector": "#main-content > section.section.inverse-section", "style": null, "blocks": ["hero-overlay"], "defaultContent": [] }
+        {
+          "id": "rc1",
+          "name": "Intro",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": [
+            "columns-intro"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "Article header",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "columns-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "Snapshot gallery",
+          "selector": "#main-content > section.section.secondary-section:nth-of-type(2)",
+          "style": "secondary",
+          "blocks": [
+            "cards-gallery"
+          ],
+          "defaultContent": [
+            "#main-content > section.section.secondary-section:nth-of-type(2) > div.container > div.utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "Testimonials",
+          "selector": "#main-content > section.section:nth-of-type(3)",
+          "style": null,
+          "blocks": [
+            "tabs-testimonial"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc5",
+          "name": "Latest articles",
+          "selector": "#main-content > section.section.secondary-section:nth-of-type(4)",
+          "style": "secondary",
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": [
+            "#main-content > section.section.secondary-section:nth-of-type(4) > div.container > div.utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc6",
+          "name": "FAQ",
+          "selector": "#main-content > section.section:nth-of-type(5)",
+          "style": null,
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": [
+            "#main-content > section.section:nth-of-type(5) .grid-layout.grid-gap-xxl > div:first-child"
+          ]
+        },
+        {
+          "id": "rc7",
+          "name": "Closing CTA",
+          "selector": "#main-content > section.section.inverse-section",
+          "style": null,
+          "blocks": [
+            "hero-overlay"
+          ],
+          "defaultContent": []
+        }
       ]
     },
     {
       "name": "listing-index",
       "urls": [
-        "https://www.wknd-trendsetters.site/blog",
-        "https://www.wknd-trendsetters.site/case-studies",
-        "https://www.wknd-trendsetters.site/fashion-insights"
+        "https://www.wknd-trendsetters.site/blog"
       ],
       "representativeUrl": "https://www.wknd-trendsetters.site/blog",
       "coverageGaps": [],
       "description": "Index/listing page: hero header + featured article promo + card grid + accent CTA band",
       "blocks": [
-        { "name": "columns-intro", "instances": ["#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"] },
-        { "name": "columns-article", "instances": ["#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"] },
-        { "name": "cards-article", "instances": ["#articles .grid-layout.grid-gap-md"] }
+        {
+          "name": "columns-intro",
+          "instances": [
+            "#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"
+          ]
+        },
+        {
+          "name": "columns-article",
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            "#articles .grid-layout.grid-gap-md"
+          ]
+        }
       ],
       "sections": [
-        { "id": "rc1", "name": "Hero header", "selector": "#main-content > header.section.secondary-section", "style": "secondary", "blocks": ["columns-intro"], "defaultContent": [] },
-        { "id": "rc2", "name": "Featured article", "selector": "#main-content > section.section:nth-of-type(1)", "style": null, "blocks": ["columns-article"], "defaultContent": [] },
-        { "id": "rc3", "name": "Latest articles", "selector": "#articles", "style": "secondary", "blocks": ["cards-article"], "defaultContent": ["#articles > div.container > div.utility-text-align-center"] },
-        { "id": "rc4", "name": "Accent CTA", "selector": "#main-content > section.section.accent-section", "style": "accent", "blocks": [], "defaultContent": ["#main-content > section.section.accent-section > div.container"] }
+        {
+          "id": "rc1",
+          "name": "Hero header",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": [
+            "columns-intro"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "Featured article",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "columns-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "Latest articles",
+          "selector": "#articles",
+          "style": "secondary",
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": [
+            "#articles > div.container > div.utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "Accent CTA",
+          "selector": "#main-content > section.section.accent-section",
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > section.section.accent-section > div.container"
+          ]
+        }
       ]
     },
     {
@@ -69,11 +222,34 @@
       "coverageGaps": [],
       "description": "Blog/article detail page: article header (image + breadcrumb/title/meta) followed by article body (default content)",
       "blocks": [
-        { "name": "columns-article", "instances": ["#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"] }
+        {
+          "name": "columns-article",
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"
+          ]
+        }
       ],
       "sections": [
-        { "id": "rc1", "name": "Article header", "selector": "#main-content > section.section:nth-of-type(1)", "style": null, "blocks": ["columns-article"], "defaultContent": [] },
-        { "id": "rc2", "name": "Article body", "selector": "#main-content > section.section:nth-of-type(2)", "style": null, "blocks": [], "defaultContent": ["#main-content > section.section:nth-of-type(2) > div.container"] }
+        {
+          "id": "rc1",
+          "name": "Article header",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "columns-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "Article body",
+          "selector": "#main-content > section.section:nth-of-type(2)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > section.section:nth-of-type(2) > div.container"
+          ]
+        }
       ]
     },
     {
@@ -85,15 +261,66 @@
       "coverageGaps": [],
       "description": "FAQ page: hero intro, accordion of Q&A, contact columns, accent CTA",
       "blocks": [
-        { "name": "columns-intro", "instances": ["#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"] },
-        { "name": "accordion-faq", "instances": ["#main-content > section.section:nth-of-type(1) .faq-list"] },
-        { "name": "columns-contact", "instances": ["#main-content > section.section.secondary-section .grid-layout.grid-gap-xxl"] }
+        {
+          "name": "columns-intro",
+          "instances": [
+            "#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .faq-list"
+          ]
+        },
+        {
+          "name": "columns-contact",
+          "instances": [
+            "#main-content > section.section.secondary-section .grid-layout.grid-gap-xxl"
+          ]
+        }
       ],
       "sections": [
-        { "id": "rc1", "name": "Hero intro", "selector": "#main-content > header.section.secondary-section", "style": "secondary", "blocks": ["columns-intro"], "defaultContent": [] },
-        { "id": "rc2", "name": "FAQ accordion", "selector": "#main-content > section.section:nth-of-type(1)", "style": null, "blocks": ["accordion-faq"], "defaultContent": [] },
-        { "id": "rc3", "name": "Contact", "selector": "#main-content > section.section.secondary-section", "style": "secondary", "blocks": ["columns-contact"], "defaultContent": [] },
-        { "id": "rc4", "name": "Accent CTA", "selector": "#main-content > section.section.accent-section", "style": "accent", "blocks": [], "defaultContent": ["#main-content > section.section.accent-section > div.container"] }
+        {
+          "id": "rc1",
+          "name": "Hero intro",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": [
+            "columns-intro"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "FAQ accordion",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "Contact",
+          "selector": "#main-content > section.section.secondary-section",
+          "style": "secondary",
+          "blocks": [
+            "columns-contact"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc4",
+          "name": "Accent CTA",
+          "selector": "#main-content > section.section.accent-section",
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > section.section.accent-section > div.container"
+          ]
+        }
       ]
     },
     {
@@ -105,15 +332,442 @@
       "coverageGaps": [],
       "description": "Showcase page: hero intro, trend card grid, feature promo, accent CTA",
       "blocks": [
-        { "name": "columns-intro", "instances": ["#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"] },
-        { "name": "cards-trend", "instances": ["#trends .grid-layout.grid-gap-md"] },
-        { "name": "columns-feature", "instances": ["#main-content > section.section.secondary-section .grid-layout.grid-gap-lg"] }
+        {
+          "name": "columns-intro",
+          "instances": [
+            "#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"
+          ]
+        },
+        {
+          "name": "cards-trend",
+          "instances": [
+            "#trends .grid-layout.grid-gap-md"
+          ]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            "#main-content > section.section.secondary-section .grid-layout.grid-gap-lg"
+          ]
+        }
       ],
       "sections": [
-        { "id": "rc1", "name": "Hero intro", "selector": "#main-content > header.section.secondary-section", "style": "secondary", "blocks": ["columns-intro"], "defaultContent": [] },
-        { "id": "rc2", "name": "Trend grid", "selector": "#trends", "style": null, "blocks": ["cards-trend"], "defaultContent": ["#trends > div.container > div.utility-text-align-center"] },
-        { "id": "rc3", "name": "Feature promo", "selector": "#main-content > section.section.secondary-section", "style": "secondary", "blocks": ["columns-feature"], "defaultContent": [] },
-        { "id": "rc4", "name": "Accent CTA", "selector": "#main-content > section.section.accent-section", "style": "accent", "blocks": [], "defaultContent": ["#main-content > section.section.accent-section > div.container"] }
+        {
+          "id": "rc1",
+          "name": "Hero intro",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": [
+            "columns-intro"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "Trend grid",
+          "selector": "#trends",
+          "style": null,
+          "blocks": [
+            "cards-trend"
+          ],
+          "defaultContent": [
+            "#trends > div.container > div.utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc3",
+          "name": "Feature promo",
+          "selector": "#main-content > section.section.secondary-section",
+          "style": "secondary",
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc4",
+          "name": "Accent CTA",
+          "selector": "#main-content > section.section.accent-section",
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > section.section.accent-section > div.container"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "trends-feature",
+      "urls": [
+        "https://www.wknd-trendsetters.site/fashion-trends-of-the-season"
+      ],
+      "representativeUrl": "https://www.wknd-trendsetters.site/fashion-trends-of-the-season",
+      "coverageGaps": [],
+      "description": "Trends landing: hero intro, feature promo, 3-card trend grid, image gallery, accent CTA",
+      "blocks": [
+        {
+          "name": "columns-intro",
+          "instances": [
+            "#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"
+          ]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            "#trends > div.container > div.grid-layout.grid-gap-lg"
+          ]
+        },
+        {
+          "name": "cards-trend",
+          "instances": [
+            "#main-content > section.section.secondary-section > div.container > div.grid-layout.desktop-3-column"
+          ]
+        },
+        {
+          "name": "cards-gallery",
+          "instances": [
+            "#main-content > section.section:nth-of-type(3) > div.container > div.grid-layout.grid-gap-sm"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "Hero intro",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": [
+            "columns-intro"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "Feature promo",
+          "selector": "#trends",
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": [
+            "#trends > div.container > div.utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc3",
+          "name": "Trend cards",
+          "selector": "#main-content > section.section.secondary-section",
+          "style": "secondary",
+          "blocks": [
+            "cards-trend"
+          ],
+          "defaultContent": [
+            "#main-content > section.section.secondary-section > div.container > div.utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "Gallery",
+          "selector": "#main-content > section.section:nth-of-type(3)",
+          "style": null,
+          "blocks": [
+            "cards-gallery"
+          ],
+          "defaultContent": [
+            "#main-content > section.section:nth-of-type(3) > div.container > div.utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc5",
+          "name": "Accent CTA",
+          "selector": "#main-content > section.section.accent-section",
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > section.section.accent-section > div.container"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "trends-listing",
+      "urls": [
+        "https://www.wknd-trendsetters.site/fashion-trends-young-adults"
+      ],
+      "representativeUrl": "https://www.wknd-trendsetters.site/fashion-trends-young-adults",
+      "coverageGaps": [],
+      "description": "Trends listing: hero intro, 3-card trend grid, article-card grid, image gallery, accent CTA",
+      "blocks": [
+        {
+          "name": "columns-intro",
+          "instances": [
+            "#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"
+          ]
+        },
+        {
+          "name": "cards-trend",
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .grid-layout.desktop-3-column"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            "#trends .grid-layout.desktop-4-column"
+          ]
+        },
+        {
+          "name": "cards-gallery",
+          "instances": [
+            "#main-content > section.section:nth-of-type(4) .grid-layout.desktop-4-column"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "Hero intro",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": [
+            "columns-intro"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "Trend cards",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "cards-trend"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "Section heading",
+          "selector": "#main-content > section.section:nth-of-type(2)",
+          "style": "secondary",
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > section.section:nth-of-type(2) > div.container"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "Article cards",
+          "selector": "#trends",
+          "style": "secondary",
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": [
+            "#trends > div.container > div.utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc5",
+          "name": "Gallery",
+          "selector": "#main-content > section.section:nth-of-type(4)",
+          "style": null,
+          "blocks": [
+            "cards-gallery"
+          ],
+          "defaultContent": [
+            "#main-content > section.section:nth-of-type(4) > div.container > div.utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc6",
+          "name": "Accent CTA",
+          "selector": "#main-content > section.section.accent-section",
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > section.section.accent-section > div.container"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "case-study",
+      "urls": [
+        "https://www.wknd-trendsetters.site/case-studies"
+      ],
+      "representativeUrl": "https://www.wknd-trendsetters.site/case-studies",
+      "coverageGaps": [],
+      "description": "Case studies: article header, image gallery, testimonials tabs, closing hero-overlay CTA",
+      "blocks": [
+        {
+          "name": "columns-article",
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"
+          ]
+        },
+        {
+          "name": "cards-gallery",
+          "instances": [
+            "#main-content > section.section.secondary-section .grid-layout.grid-gap-sm"
+          ]
+        },
+        {
+          "name": "tabs-testimonial",
+          "instances": [
+            "#cases .tabs-wrapper"
+          ]
+        },
+        {
+          "name": "hero-overlay",
+          "instances": [
+            "#main-content > section.section.inverse-section .grid-layout.desktop-1-column"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "Hero header",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > header.section.secondary-section > div.container"
+          ]
+        },
+        {
+          "id": "rc2",
+          "name": "Article header",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "columns-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "Gallery",
+          "selector": "#main-content > section.section.secondary-section",
+          "style": "secondary",
+          "blocks": [
+            "cards-gallery"
+          ],
+          "defaultContent": [
+            "#main-content > section.section.secondary-section > div.container > div.utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "Testimonials",
+          "selector": "#cases",
+          "style": null,
+          "blocks": [
+            "tabs-testimonial"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc5",
+          "name": "Closing CTA",
+          "selector": "#main-content > section.section.inverse-section",
+          "style": null,
+          "blocks": [
+            "hero-overlay"
+          ],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "insights-listing",
+      "urls": [
+        "https://www.wknd-trendsetters.site/fashion-insights"
+      ],
+      "representativeUrl": "https://www.wknd-trendsetters.site/fashion-insights",
+      "coverageGaps": [],
+      "description": "Insights listing: hero intro, featured article, article-card grid, image gallery, accent CTA",
+      "blocks": [
+        {
+          "name": "columns-intro",
+          "instances": [
+            "#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"
+          ]
+        },
+        {
+          "name": "columns-article",
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            "#articles .grid-layout.grid-gap-md"
+          ]
+        },
+        {
+          "name": "cards-gallery",
+          "instances": [
+            "#main-content > section.section:nth-of-type(3) .grid-layout.grid-gap-sm"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "Hero intro",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": [
+            "columns-intro"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "Featured article",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "columns-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "Article cards",
+          "selector": "#articles",
+          "style": "secondary",
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": [
+            "#articles > div.container > div.utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "Gallery",
+          "selector": "#main-content > section.section:nth-of-type(3)",
+          "style": null,
+          "blocks": [
+            "cards-gallery"
+          ],
+          "defaultContent": [
+            "#main-content > section.section:nth-of-type(3) > div.container > div.utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc5",
+          "name": "Accent CTA",
+          "selector": "#main-content > section.section.accent-section",
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > section.section.accent-section > div.container"
+          ]
+        }
       ]
     }
   ]
